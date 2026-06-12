@@ -13,8 +13,8 @@ team_members:
     email: "sonukumar25@spit.ac.in"
     role: "Data Engineer / Backend"
 
-github_repo: "https://github.com/YOUR_USERNAME/redrob-ranker"
-sandbox_link: "https://YOUR_STREAMLIT_APP.streamlit.app"
+github_repo: "https://github.com/Sonu448866/redrob-ranker"
+sandbox_link: "https://redrob-ranker-hackathon.streamlit.app/"
 
 reproduce_command: "python rank.py --candidates ./candidates.jsonl --out ./submission.csv"
 
