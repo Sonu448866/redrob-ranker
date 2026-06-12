@@ -119,5 +119,5 @@ A great profile that hasn't been active for 6+ months and has a 5% recruiter res
 
 ## 🔗 Links
 
-- **Sandbox:** [Streamlit App](https://YOUR_STREAMLIT_APP.streamlit.app) ← update this
+- **Sandbox:** [Streamlit App](https://redrob-ranker-hackathon.streamlit.app/)
 - **Team:** Adithya Maurya (adithyamaurya@25spit.ac.in) & Sonu Kumar (sonukumar25@spit.ac.in)
