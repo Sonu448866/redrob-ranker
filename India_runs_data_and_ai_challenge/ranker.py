@@ -177,7 +177,7 @@ class Ranker:
 
         # ---- Phase 2: sort to get top candidates before semantic ----------
         # We do semantic scoring only on top candidates (much faster)
-        all_results.sort(key=lambda r: r["final_score"], reverse=True)
+        all_results.sort(key=lambda r: (-r["final_score"], r["candidate_id"]))
 
         # Take top 500 for semantic re-ranking (not all 100K — too slow for TF-IDF on 100K)
         # Actually, TF-IDF on 100K is fast enough (~10-20s). We do all of them.
@@ -207,7 +207,7 @@ class Ranker:
         self._log(f"✅ Semantic scoring complete in {t3 - t2:.1f}s")
 
         # ---- Phase 3: final sort and top-k --------------------------------
-        all_results.sort(key=lambda r: r["final_score"], reverse=True)
+        all_results.sort(key=lambda r: (-round(r["final_score"], 4), r["candidate_id"]))
         top_results = all_results[: self.top_k]
 
         self._log(f"🏆 Top {self.top_k} selected. Generating reasoning…")
