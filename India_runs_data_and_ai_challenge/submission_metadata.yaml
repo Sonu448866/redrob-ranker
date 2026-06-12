@@ -1,0 +1,60 @@
+team_name: "AIRankers"
+
+primary_contact:
+  name: "Adithya Maurya"
+  email: "adithyamaurya@25spit.ac.in"
+  phone: "+91-7208248380"
+
+team_members:
+  - name: "Adithya Maurya"
+    email: "adithyamaurya@25spit.ac.in"
+    role: "Team Lead / ML Engineer"
+  - name: "Sonu Kumar"
+    email: "sonukumar25@spit.ac.in"
+    role: "Data Engineer / Backend"
+
+github_repo: "https://github.com/YOUR_USERNAME/redrob-ranker"
+sandbox_link: "https://YOUR_STREAMLIT_APP.streamlit.app"
+
+reproduce_command: "python rank.py --candidates ./candidates.jsonl --out ./submission.csv"
+
+compute:
+  platform: "Local Windows Machine"
+  cpu_cores: 8
+  ram_gb: 16
+  python_version: "3.11"
+  os: "Windows 11"
+  uses_gpu_for_inference: false
+  has_network_during_ranking: false
+  pre_computation_required: false
+  pre_computation_time_minutes: 0
+
+ai_tools_used:
+  - "Antigravity (Google DeepMind)"
+  - "GitHub Copilot"
+
+ai_usage_summary: |
+  Used AI tools for code review, architectural discussion, and initial scaffolding.
+  All scoring logic, weights, and design decisions were made by the team based on
+  careful analysis of the JD and dataset. No candidate data was fed to any LLM.
+  The ranking pipeline runs entirely offline with no API calls.
+
+methodology_summary: |
+  Multi-stage hybrid ranker with 5 structural scoring components (skills match 30%,
+  career trajectory 25%, experience validity 20%, location/availability 15%,
+  education 10%) combined with a multiplicative behavioral signal modifier (0.35–1.15).
+  Key innovations: (1) Anti-keyword-stuffing — skills with high proficiency but 0
+  duration_months are penalised heavily. (2) Explicit consulting-firm detection —
+  careers entirely at TCS/Infosys/Wipro/etc receive a 92% penalty. (3) Honeypot
+  detection — impossible profiles (overlapping jobs, expert skills with 0 duration,
+  career months >> YOE) are scored near zero. (4) TF-IDF semantic boost — career
+  description text matched against JD via cosine similarity adds up to +10%.
+  (5) Behavioral modifier weights 10 platform signals to reflect true availability.
+  Runtime: ~60–90 seconds for 100K candidates on CPU with 16GB RAM.
+
+declarations:
+  read_submission_spec: true
+  code_is_original_work: true
+  no_collusion: true
+  honeypot_check_done: true
+  reproduction_tested: true

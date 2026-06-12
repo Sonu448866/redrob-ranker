@@ -1,0 +1,10 @@
+# Ignore the huge dataset files so GitHub doesn't block the push (100MB limit)
+data/
+test_output.csv
+submission.csv
+
+# Python caches
+__pycache__/
+*.pyc
+.pytest_cache/
+.coverage

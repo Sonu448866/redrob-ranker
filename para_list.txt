@@ -1,0 +1,17 @@
+﻿Para 0: 'Redrob Behavioral Signals ΓÇö Reference'
+Para 1: "This document explains the 23 behavioral signals embedded in each candidate's redrob_signals object,"
+Para 2: ''
+Para 3: 'What are Redrob signals?'
+Para 4: 'In a real recruiting platform, candidates generate observable behavior beyond what they list in thei'
+Para 5: 'Do they actually respond to recruiter messages?'
+Para 6: 'Have they logged in recently?'
+Para 7: 'Did they complete the assessments they started?'
+Para 8: 'Are recruiters saving their profile?'
+Para 9: 'Have they completed previous interview cycles?'
+Para 10: 'These behavioral signals are often more predictive of whether a candidate can actually be hired than'
+Para 11: 'This dataset includes these signals so that ranking systems can incorporate them as a multiplier or '
+Para 12: ''
+Para 13: 'The 23 signals'
+Para 14: ''
+Total paragraphs: 15
+Total tables: 1
