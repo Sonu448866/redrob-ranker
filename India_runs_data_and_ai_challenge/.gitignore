@@ -1,4 +1,4 @@
-# Ignore the huge dataset files so GitHub doesn't block the push (100MB limit)
+# Ignore the huge dataset files 
 data/
 test_output.csv
 submission.csv
